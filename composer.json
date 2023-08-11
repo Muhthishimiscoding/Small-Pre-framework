@@ -2,7 +2,7 @@
     "name": "mvc/small-pre-framework",
     "autoload": {
         "psr-4": {
-            "Mvc\\SmallPreFramework\\": "src/"
+            "MuhthishimisCoding\\SmallPreFramework\\": "src/"
         }
     },
     "authors": [
