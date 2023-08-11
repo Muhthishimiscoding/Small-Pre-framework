@@ -1,8 +1,8 @@
 <?php
-namespace Worth\core\form;
+namespace MuhthishimisCoding\PreFramework\form;
 
-use Worth\core\Model;
-use Worth\core\form\Field;
+use MuhthishimisCoding\PreFramework\Model;
+use MuhthishimisCoding\PreFramework\form\Field;
 
 class Form
 {

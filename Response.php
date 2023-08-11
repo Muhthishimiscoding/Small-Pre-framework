@@ -1,6 +1,6 @@
 <?php
 
-namespace Worth\core;
+namespace MuhthishimisCoding\PreFramework;
 class Response
 {
     public function setStatusCode($code){

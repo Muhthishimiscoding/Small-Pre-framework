@@ -1,5 +1,5 @@
 <?php
-namespace Worth\core;
+namespace MuhthishimisCoding\PreFramework;
 abstract class DbModel extends Model
 {
     public Database $db;

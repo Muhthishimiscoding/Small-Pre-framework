@@ -1,5 +1,5 @@
 <?php
-namespace Worth\core;
+namespace MuhthishimisCoding\PreFramework;
 
 class Database
 {

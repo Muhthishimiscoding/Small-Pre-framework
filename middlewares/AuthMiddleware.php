@@ -1,6 +1,6 @@
 <?php
-namespace Worth\core\middlewares;
-use Worth\core\Application;
+namespace MuhthishimisCoding\PreFramework\middlewares;
+use MuhthishimisCoding\PreFramework\Application;
 class AuthMiddleware extends BaseMiddleware
 {
     public array $actions = [];

@@ -1,13 +1,13 @@
 <?php
-namespace Worth\core;
+namespace MuhthishimisCoding\PreFramework;
 
-use Worth\core\middlewares\BaseMiddleware;
+use MuhthishimisCoding\PreFramework\middlewares\BaseMiddleware;
 
 class Controller
 {
     /**
      * Summary of middleWares
-     * @var \Worth\core\middlewares\BaseMiddleware[];
+     * @var \MuhthishimisCoding\PreFramework\middlewares\BaseMiddleware[];
      */
     protected array $middleWares = [];
     public string $action ='';
