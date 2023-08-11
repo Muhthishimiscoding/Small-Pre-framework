@@ -1,0 +1,15 @@
+{
+    "name": "mvc/small-pre-framework",
+    "autoload": {
+        "psr-4": {
+            "Mvc\\SmallPreFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MuhthishimisCoding",
+            "email": "makemutisticohere@gmail.com"
+        }
+    ],
+    "require": {}
+}
