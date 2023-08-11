@@ -44,8 +44,6 @@ class Errorhandler
             $errors = $this->giveErrorArray($e);
         }
         error_log(json_encode($errors));
-        // $errors = is_array($errors) ?json_encode($errors):$errors;
-        // file_put_contents($this->logFilePath,$errors);
     }
     public function getMode(){
         return $this->development;
@@ -58,8 +56,5 @@ class Errorhandler
             "code" => $e->getCode(),
             "timestamp" => date("Y-m-d H:i:s a"),
         ];
-    }
-    public function handleError($errors)
-    {
     }
 }

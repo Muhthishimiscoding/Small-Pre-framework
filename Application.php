@@ -17,7 +17,11 @@ class Application
     public Database $db;
     public function __construct($rootPath,array $config)
     {   
-        date_default_timezone_set("Asia/Karachi");
+        /**
+         * Set your timezone by defining your own TIMEZONE in .env
+         */
+        // date_default_timezone_set($config['timezone']);
+
         self::$app = $this;
         self::$ROOT_DIR = $rootPath;
         $this->error = new Errorhandler(self::$ROOT_DIR.$config['logFile'],$config['error_reporting']);

@@ -8,7 +8,7 @@ class Request
     {
 
         $path = $_SERVER['REQUEST_URI'] ?? '/';
-        // Creating position variable   | comparing with ternary operator
+        // Creating position variable          | comparing with ternary operator
         return ($position = strpos($path, '?')) ? substr($path, 0, $position) : $path;
     }
     function getMethod()

@@ -25,7 +25,7 @@ class Router
         $callBack = $this->routes[$method][$path] ?? false;
         if (!$callBack) {
             http_response_code(404);
-            $this->renderView(['view' => '_404']);
+            $this->renderView('_404');
             exit;
         }
         return is_string($callBack) ? $this->renderView($callBack) : call_user_func($callBack, $this->request);
@@ -46,23 +46,10 @@ class Router
         foreach ($params as $key => $value) {
             $$key = $value;
         }
-        // Application::app()->controller->action = $view['view'];
-        // print_r(Application::app()->controller->getMiddleWares());
-        // foreach (Application::app()->controller->getMiddleWares() as $middleWare) {
-        //     $middleWare->execute();
-        // }
-        ;
-        // if ($view['css']) {
-        //     echo str_replace("<!-- CSS LINKS HERE -->", $view['css'], $this->layOutContent(Application::$ROOT_DIR . "/views/layouts/{$view['header']}.php"));
-        // } else {
-            include_once Application::$ROOT_DIR . "/views/layouts/{$view['header']}.php";
-        // }
+
+        include_once Application::$ROOT_DIR . "/views/layouts/{$view['header']}.php";
         include_once Application::$ROOT_DIR . "/views/{$view['view']}.php";
-        // if ($view['scripts']) {
-            echo str_replace("<!-- SCRIPTS LINKS HERE -->", $view['scripts'], $this->layOutContent(Application::$ROOT_DIR . "/views/layouts/{$view['footer']}.php"));
-        // } else {
-            include_once Application::$ROOT_DIR . "/views/layouts/{$view['footer']}.php";
-        // }
+        include_once Application::$ROOT_DIR . "/views/layouts/{$view['footer']}.php";
 
     }
     public function layOutContent($path)
