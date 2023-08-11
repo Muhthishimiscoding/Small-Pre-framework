@@ -2,7 +2,7 @@
     "name": "muhthishimiscoding/small-pre-framework",
     "autoload": {
         "psr-4": {
-            "MuhthishimisCoding\\PreFramework\\": "."
+            "MuhthishimisCoding\\PreFramework": "."
         }
     },
     "authors": [
