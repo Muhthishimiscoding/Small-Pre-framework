@@ -6,13 +6,8 @@ use MuhthishimisCoding\PreFramework\Model;
 class Field
 {
     public Model $model;
-    // public string $type;
-    // public const TYPE_TEXT='text';
-    // public const TYPE_PASSWORD='password';
-    // public const TYPE_NUMBER = 'number';
     public function __construct(Model &$model)
     {
-        // $this->type = self::TYPE_TEXT;
         $this->model = $model;
     }
     public function input(
@@ -20,10 +15,12 @@ class Field
         $label,
         $type = 'text',
         $classes = '',
+        $placeholder = '',
+        $attribute ='',
         $html =
         '<div class="mb-3">
             <label class="form-label">%s</label>
-            <input type="%s" name="%s" value="%s" class="form-control %s %s">
+            <input type="%s" name="%s" value="%s" class="form-control %s %s" %s %s>
             %s
         </div>'
     ) {
@@ -36,6 +33,8 @@ class Field
             $this->model->{$name},
             $classes,
             $bool ? 'is-invalid' : '',
+            $attribute,
+            $placeholder,
             $bool ? '<div class="invalid-feedback">' . $this->model->getError($name) . '</div>' : ''
         );
     }
@@ -68,14 +67,4 @@ class Field
             $bool ? '<div class="invalid-feedback">' . $this->model->getError($name) . '</div>' : ''
         );
     }
-
-    // public function __toString(){
-    //     return '<input>';
-    // }
-
-    // public passwordType(){
-    //     $this->type =self::TYPE_PASSWORD;
-    //     return $this
-    // }
-    // When contructor function was returning input then $this would do the same with the help of __toString
 }
